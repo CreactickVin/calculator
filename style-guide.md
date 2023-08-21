@@ -83,11 +83,11 @@ The designs were created to the following widths:
 
 ## Typography
 
-### Body Copy
+### Body Copy   (done)
 
 - Font size (numbers): 32px
 
-### Font
+### Font (done)
 
 - Family: [League Spartan](https://fonts.google.com/specimen/League+Spartan)
 - Weights: 700

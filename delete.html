@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
 
-    <title>Calculator</title>
+    <title>Delete</title>
 
     <style>
         * {
@@ -152,20 +152,14 @@
     </style>
 
     <script>
-        let val = "", result, temp = "";
+        let val = "", result;
+
 
         function getValue(value) {
-            
+
+            if()
+
             val += String(value);
-            //replace all double operators
-            temp = val.replace("++", "+");
-            temp = val.replace("--", "-");
-            temp = val.replace("**", "*");
-            temp = val.replace("//", "/");
-            temp = val.replace("..", ".");
-            val = temp;
-
-
             document.getElementById("calc_screen").innerText = val;
             console.log(val); //remove this afterwards
 
@@ -193,7 +187,7 @@
             console.log(val);
         }
 
-
+        
     </script>
 </head>
 
@@ -238,17 +232,17 @@
                     <button type="button" class="calc_button" onclick="getValue(4)">4</button>
                     <button type="button" class="calc_button" onclick="getValue(5)">5</button>
                     <button type="button" class="calc_button" onclick="getValue(6)">6</button>
-                    <button type="button" class="calc_button btn_plus" onclick="getValue('+')">+</button>
+                    <button type="button" class="calc_button" onclick="getValue('+')">+</button>
 
                     <button type="button" class="calc_button" onclick="getValue(1)">1</button>
                     <button type="button" class="calc_button" onclick="getValue(2)">2</button>
                     <button type="button" class="calc_button" onclick="getValue(3)">3</button>
-                    <button type="button" class="calc_button btn_minus" onclick="getValue('-')">- </button>
+                    <button type="button" class="calc_button" onclick="getValue('-')">- </button>
 
                     <button type="button" class="calc_button" onclick="getValue('.')">. </button>
                     <button type="button" class="calc_button" onclick="getValue(0)">0</button>
-                    <button type="button" class="calc_button btn_divide" onclick="getValue('/')">/</button>
-                    <button type="button" class="calc_button btn_multiply" onclick="getValue('*')">x</button>
+                    <button type="button" class="calc_button" onclick="getValue('/')">/</button>
+                    <button type="button" class="calc_button" onclick="getValue('*')">x</button>
 
                     <button type="button" class="calc_button btn-reset btn-blue" onclick="clearScreen()">reset</button>
                     <button type="button" class="calc_button btn-result" onclick="Result()">=</button>

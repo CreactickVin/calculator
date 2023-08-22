@@ -155,16 +155,32 @@
         let val = "", result, temp = "";
 
         function getValue(value) {
-            
-            val += String(value);
-            //replace all double operators
-            temp = val.replace("++", "+");
-            temp = val.replace("--", "-");
-            temp = val.replace("**", "*");
-            temp = val.replace("//", "/");
-            temp = val.replace("..", ".");
-            val = temp;
 
+            val += String(value);
+
+            //replace all double operators
+            switch (value) {
+                case "+":
+                    temp = val.replace("++", "+");
+                    val = temp;
+                    break;
+                case "-":
+                    temp = val.replace("--", "-");
+                    val = temp;
+                    break;
+                case "*":
+                    temp = val.replace("**", "*");
+                    val = temp;
+                    break;
+                case "/":
+                    temp = val.replace("//", "/");
+                    val = temp;
+                    break;
+                case ".":
+                    temp = val.replace("..", ".");
+                    val = temp;
+                    break;
+            }
 
             document.getElementById("calc_screen").innerText = val;
             console.log(val); //remove this afterwards
